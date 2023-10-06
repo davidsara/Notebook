@@ -39,7 +39,7 @@ Výpis textu na konzoli
 Console.WriteLine("Hello, World!");
 ```
 
-Načtení hodnoty z klávesnice
+Načtení vstupu z klávesnice
 
 ```
 string vstup = Console.ReadLine();
@@ -52,3 +52,89 @@ Console.WriteLine("Zadej své jméno");
 string jmeno = Console.ReadLine();
 Console.WriteLine($"Ahoj {jmeno}!");
 string jmeno = Console.ReadLine();
+
+## Podmínky
+
+Pokud potřebujeme reagovat a větvit program podle určité situace (např. hodnota zadaná uživatelem).
+
+### if - else
+
+Jestliže platí podmínka v závorce, provede se kód uvnitř bloku if, v opačném případě se provede kód uvnitř bloku else
+
+```
+int cislo = int.Parse(Console.ReadLine());
+if (cislo > 10)
+{
+    Console.WriteLine("Číslo je větší než 10");
+}
+else
+{
+    Console.WriteLine("Číslo není větší než 10.");
+}
+```
+
+### if - elseif
+
+V některých případech může rozhodování skončit více než 2 stavy.
+
+```csharp
+if (cislo > 10)
+{
+    Console.WriteLine("Číslo je větší než 10");
+}
+else if (cislo < 10)
+{
+    Console.WriteLine("Číslo je menší než 10.");
+}
+else
+{
+    Console.WriteLine("Číslo rovná se deset.");
+}
+```
+
+Blok else je nepovinný, pokud ho nepotřebujeme, nemusíme ho uvádět.
+
+### Vnořené podmínky
+
+Podmínky můžeme libovolně vnořit do sebe. Pomocí krokování si můžeme ověřit, že vše funguje dle našich představ.
+
+```csharp
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+int hodiny = int.Parse(Console.ReadLine());
+
+if (hodiny > 23)
+{
+    Console.WriteLine("Neplatný čas.");
+}
+else if (hodiny > 6)
+{
+    if (hodiny < 8)
+    {
+        Console.WriteLine("Dobré ráno. ");
+    }
+    else if (hodiny < 12)
+    {
+        Console.WriteLine("Dobré dopoledne.");
+    }
+    else if (hodiny == 12)
+    {
+        Console.WriteLine("Dobré poledne.");
+    }
+    else if (hodiny < 18)
+    {
+        Console.WriteLine("Dobré odpoledne.");
+    }
+    else if (hodiny < 22)
+    {
+        Console.WriteLine("Dobrý večer.");
+    }
+    else
+    {
+        Console.WriteLine("Dobrou noc.");
+    }
+}
+else
+{
+    Console.WriteLine("😴😴😴");
+}
+```
