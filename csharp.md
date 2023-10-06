@@ -52,6 +52,7 @@ Console.WriteLine("Zadej své jméno");
 string jmeno = Console.ReadLine();
 Console.WriteLine($"Ahoj {jmeno}!");
 string jmeno = Console.ReadLine();
+```
 
 ## Podmínky
 
