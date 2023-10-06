@@ -41,7 +41,7 @@ Console.WriteLine("Hello, World!");
 
 Načtení vstupu z klávesnice
 
-```
+```csharp
 string vstup = Console.ReadLine();
 ```
 
@@ -61,7 +61,7 @@ Pokud potřebujeme reagovat a větvit program podle určité situace (např. hod
 
 Jestliže platí podmínka v závorce, provede se kód uvnitř bloku if, v opačném případě se provede kód uvnitř bloku else
 
-```
+```csharp
 int cislo = int.Parse(Console.ReadLine());
 if (cislo > 10)
 {
