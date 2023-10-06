@@ -145,6 +145,7 @@ else
 Příkaz switch vybere seznam příkazů ke spuštění na základě shody hodnoty proměné s hodnotou uvedenou jako `case` (případ). Pokud ani jedna hodnota nevyhovuje, provede se blok `default`.
 
 ``` csharp
+int patro = int.Parse(Console.ReadLine());
 switch (patro)
 {
     case 0:
