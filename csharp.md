@@ -139,3 +139,30 @@ else
     Console.WriteLine("😴😴😴");
 }
 ```
+
+### switch
+
+Příkaz switch vybere seznam příkazů ke spuštění na základě shody hodnoty proměné s hodnotou uvedenou jako `case` (případ). Pokud ani jedna hodnota nevyhovuje, provede se blok `default`.
+
+``` csharp
+switch (patro)
+{
+    case 0:
+        Console.WriteLine("Jedeme do přízemí.");
+        break;
+    case 1:
+        Console.WriteLine("Jedeme do prvního patra.");
+        break;
+    case 2:
+        Console.WriteLine("Jedeme do druhého patra.");
+        break;
+    case 3:
+        Console.WriteLine("Jedeme do třetího patra.");
+        break;
+    case 4:
+    default:
+        Console.WriteLine("Do takového patra nejezdím.");
+        break;
+}
+```
+```
